@@ -22,11 +22,6 @@ antimony = { package = "antimony-rs", path = "crates/antimony", features = ["sbm
 sbml-io = { path = "crates/sbml-io" }
 # eigenvalues (already in the tree through diffsol)
 nalgebra = "0.35"
-cranelift-codegen = "0.137"
-cranelift-frontend = "0.137"
-cranelift-jit = "0.137"
-cranelift-module = "0.137"
-cranelift-native = "0.137"
 
 [features]
 default = []
@@ -36,3 +31,10 @@ python = ["dep:pyo3", "dep:numpy"]
 lto = "fat"
 codegen-units = 1
 opt-level = 3
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+cranelift-codegen = "0.137"
+cranelift-frontend = "0.137"
+cranelift-jit = "0.137"
+cranelift-module = "0.137"
+cranelift-native = "0.137"
