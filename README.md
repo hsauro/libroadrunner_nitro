@@ -4,6 +4,8 @@ A fast engine for simulating biochemical models (SBML), written in Rust. It does
 [libroadrunner](https://github.com/sys-bio/roadrunner), gives the same answers, and needs neither libroadrunner
 nor libsbml.
 
+This was developed with the assistance of Claude Code (Opus 5.5, med)
+
 You can use it two ways:
 
 | If you write... | Use | Section |
